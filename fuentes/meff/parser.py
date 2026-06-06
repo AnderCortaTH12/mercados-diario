@@ -405,6 +405,7 @@ def main() -> None:
         python -m fuentes.meff.parser --procesar               # pipeline con último día hábil
         python -m fuentes.meff.parser 2026-06-04 --analizar    # procesa + genera resumen IA
         python -m fuentes.meff.parser --analizar               # analiza último día hábil
+        python -m fuentes.meff.parser --recuperar              # recupera días pendientes
     """
     from core.analizador import analizar_dia, guardar_resumen
 
@@ -413,6 +414,7 @@ def main() -> None:
     args = sys.argv[1:]
     procesar = "--procesar" in args
     analizar = "--analizar" in args
+    recuperar = "--recuperar" in args
     args_fecha = [a for a in args if not a.startswith("--")]
 
     fecha: date | None = None
@@ -423,7 +425,30 @@ def main() -> None:
             logger.error("Formato de fecha inválido: '%s'. Usa YYYY-MM-DD.", args_fecha[0])
             sys.exit(1)
 
-    if analizar:
+    if recuperar:
+        from core.recuperacion import detectar_dias_pendientes, ejecutar_pendientes
+
+        ruta_resumenes = DIRECTORIO_PROYECTO / "resumenes" / "meff"
+        ruta_historico = DIRECTORIO_PROYECTO / "data" / "meff_historico.csv"
+
+        pendientes = detectar_dias_pendientes(ruta_resumenes, ruta_historico)
+        if not pendientes:
+            logger.info("Sistema al día — no hay resúmenes pendientes.")
+            sys.exit(0)
+
+        logger.info(
+            "%d días pendientes: %s",
+            len(pendientes),
+            [d.isoformat() for d in pendientes],
+        )
+        resultados = ejecutar_pendientes(pendientes)
+
+        exitosos = sum(1 for r in resultados if r.exito)
+        fallidos = len(resultados) - exitosos
+        logger.info("Recuperación completada: %d OK, %d fallidos.", exitosos, fallidos)
+        sys.exit(0 if fallidos == 0 else 1)
+
+    elif analizar:
         # --analizar implica procesar primero
         resultado_proc = procesar_meff(fecha)
         if not resultado_proc.exito:

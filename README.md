@@ -52,7 +52,7 @@ mercados-diario/
 ├── data/                     ← Histórico de datos transformados (CSV)
 ├── resumenes/                ← Resúmenes generados (Markdown + JSON)
 ├── .github/workflows/
-│   └── ejecucion_diaria.yml  ← GitHub Action programado (lun–vie, 21:00 UTC)
+│   └── ejecucion_diaria.yml  ← GitHub Action programado (lun–vie, 08:00 UTC)
 └── tests/
 ```
 
@@ -115,11 +115,60 @@ python -m fuentes.meff.parser 2026-06-04 --analizar
 
 # Usar último día hábil automáticamente
 python -m fuentes.meff.parser --analizar
+
+# Recuperar días pendientes (últimos 10 días hábiles sin resumen, máx 5)
+python -m fuentes.meff.parser --recuperar
 ```
 
 Los resúmenes generados se guardan en `resumenes/meff/`:
 - `YYYY-MM-DD.md` — texto Markdown listo para leer
 - `YYYY-MM-DD.json` — metadatos (modelo, tokens, coste, texto)
+
+---
+
+## Ejecución automática
+
+### Workflow programado
+
+El GitHub Action `Resumen Diario MEFF` se ejecuta automáticamente **de lunes a viernes a las 08:00 UTC** (09:00 España en invierno, 10:00 en verano). A esa hora el MEFF ha publicado las estadísticas del cierre del día anterior.
+
+Cada ejecución:
+1. Descarga el Excel del MEFF del último día hábil
+2. Lo parsea y actualiza el histórico CSV
+3. Detecta anomalías
+4. Genera el resumen con Claude API
+5. Hace commit y push del resumen al repositorio
+
+**Frecuencia estimada:** ~22 ejecuciones/mes · ~$0,02–$0,03 por ejecución · **total ~$0,50–$0,75 USD/mes**
+
+### Ejecución manual
+
+Desde la pestaña **Actions** → **Resumen Diario MEFF** → **Run workflow**:
+
+- Deja el campo `fecha` vacío para procesar el último día hábil.
+- O introduce una fecha concreta en formato `YYYY-MM-DD` para regenerar un día específico.
+
+### Ver logs de ejecuciones pasadas
+
+En la pestaña **Actions**, haz clic en cualquier ejecución. Los logs de Python se descargan como artifact (`logs-ejecucion-<run_id>`) y se conservan 30 días.
+
+### Recuperar días pendientes
+
+Si el workflow falla varios días seguidos (puente largo, incidencia en GitHub Actions, etc.), ejecuta localmente:
+
+```bash
+python -m fuentes.meff.parser --recuperar
+```
+
+Detecta los últimos 10 días hábiles sin resumen y genera hasta 5 de ellos. Ejecuta varias veces si hay más de 5 pendientes.
+
+### Notificaciones de error
+
+GitHub envía un email automáticamente cuando un workflow falla repetidamente. Para activarlo:
+
+> **Settings → Notifications → Actions → marcar "Send notifications for failed workflows only"**
+
+No se requiere ninguna integración adicional con servicios externos.
 
 ---
 
