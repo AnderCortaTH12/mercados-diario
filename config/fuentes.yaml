@@ -1,0 +1,43 @@
+# =============================================================================
+# Configuración declarativa de fuentes de datos
+# =============================================================================
+# Cada fuente es una entrada de este archivo. El sistema lee esta configuración
+# y ejecuta el ciclo completo (descarga → parseo → análisis IA) por cada fuente.
+#
+# Para añadir una fuente nueva, duplica el bloque de ejemplo de abajo y ajusta
+# los valores. No es necesario modificar ningún archivo Python del core/.
+#
+# Placeholders disponibles para url_plantilla:
+#   {fecha}     → fecha en formato DDMMAAAA  (ej: 06062026)
+#   {fecha_iso} → fecha en formato YYYY-MM-DD (ej: 2026-06-06)
+#   {anyo}      → año de 4 dígitos           (ej: 2026)
+#   {mes}       → mes de 2 dígitos           (ej: 06)
+#   {dia}       → día de 2 dígitos           (ej: 06)
+# =============================================================================
+
+fuentes:
+
+  meff:
+    nombre: "MEFF — Mercado Español de Futuros y Opciones"
+    descripcion: >
+      Estadísticas diarias de volumen negociado y open interest de derivados
+      financieros sobre acciones e índices españoles (IBEX 35, acciones individuales).
+      Publicado por BME (Bolsas y Mercados Españoles) al cierre de cada sesión.
+    url_plantilla: "https://www.meff.es/docs/Ficheros/Descarga/dRV/RV{fecha}.xlsx"
+    # {fecha} se sustituye por la fecha en formato DDMMAAAA, ej: RV06062026.xlsx
+    formato: xlsx
+    parser: meff          # carpeta en fuentes/ que contiene parser.py
+    prompt: meff          # carpeta en fuentes/ que contiene prompt.md
+    activa: true
+
+  # ---------------------------------------------------------------------------
+  # EJEMPLO — cómo añadir una fuente nueva (descomentar y ajustar)
+  # ---------------------------------------------------------------------------
+  # bmv:
+  #   nombre: "BMV — Bolsa Mexicana de Valores"
+  #   descripcion: "Resumen diario de operaciones del mercado de valores mexicano."
+  #   url_plantilla: "https://ejemplo.bmv.com.mx/datos/{fecha_iso}/resumen.csv"
+  #   formato: csv
+  #   parser: bmv
+  #   prompt: bmv
+  #   activa: false

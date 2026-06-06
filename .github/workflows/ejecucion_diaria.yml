@@ -1,0 +1,33 @@
+# =============================================================================
+# GitHub Action: Ejecución diaria del sistema mercados-diario
+# =============================================================================
+# Este workflow se completará en la Fase 5 del proyecto.
+#
+# Comportamiento previsto al completarlo:
+#   - Ejecutarse automáticamente de lunes a viernes a las 21:00 UTC
+#     (23:00 Madrid en horario de verano, tras el cierre del mercado europeo).
+#   - Instalar dependencias Python.
+#   - Ejecutar el pipeline completo: descarga → procesado → análisis IA.
+#   - Hacer commit de los nuevos CSV en data/ y los resúmenes en resumenes/.
+#   - Publicar el resumen del día (opcional: como GitHub Pages, issue o artefacto).
+#
+# Secretos que necesitará este workflow (configurar en Settings → Secrets):
+#   - ANTHROPIC_API_KEY: clave de acceso a la Claude API.
+# =============================================================================
+
+name: Ejecución Diaria de Mercados
+
+on:
+  schedule:
+    # Lunes a viernes a las 21:00 UTC
+    - cron: "0 21 * * 1-5"
+  workflow_dispatch:
+    # Permite lanzar el workflow manualmente desde la interfaz de GitHub
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-latest
+    # TODO (Fase 5): definir los pasos del pipeline aquí
+    steps:
+      - name: "[Placeholder] Este job se implementará en Fase 5"
+        run: echo "Workflow pendiente de implementación."

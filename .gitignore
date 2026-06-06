@@ -1,0 +1,53 @@
+# Variables de entorno — nunca subir claves de API
+.env
+.env.*
+
+# Entorno virtual Python
+.venv/
+venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Descargas crudas — solo se guardan los CSV procesados
+downloads/
+raw/
+*.xlsx
+*.xls
+*.tmp
+
+# Artefactos de build y distribución
+dist/
+build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+logs/
