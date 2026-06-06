@@ -403,11 +403,16 @@ def main() -> None:
         python -m fuentes.meff.parser 2026-06-04               # descarga fecha concreta
         python -m fuentes.meff.parser 2026-06-04 --procesar    # pipeline completo
         python -m fuentes.meff.parser --procesar               # pipeline con último día hábil
+        python -m fuentes.meff.parser 2026-06-04 --analizar    # procesa + genera resumen IA
+        python -m fuentes.meff.parser --analizar               # analiza último día hábil
     """
+    from core.analizador import analizar_dia, guardar_resumen
+
     configurar_logging()
 
     args = sys.argv[1:]
     procesar = "--procesar" in args
+    analizar = "--analizar" in args
     args_fecha = [a for a in args if not a.startswith("--")]
 
     fecha: date | None = None
@@ -418,7 +423,40 @@ def main() -> None:
             logger.error("Formato de fecha inválido: '%s'. Usa YYYY-MM-DD.", args_fecha[0])
             sys.exit(1)
 
-    if procesar:
+    if analizar:
+        # --analizar implica procesar primero
+        resultado_proc = procesar_meff(fecha)
+        if not resultado_proc.exito:
+            logger.error("FALLO en procesamiento — %s", resultado_proc.mensaje)
+            sys.exit(1)
+        logger.info("Procesamiento OK — %s", resultado_proc.mensaje)
+
+        fecha_sesion = resultado_proc.fecha
+        ruta_historico = DIRECTORIO_PROYECTO / "data" / "meff_historico.csv"
+        ruta_anomalias = DIRECTORIO_PROYECTO / "data" / "anomalias" / f"{fecha_sesion.isoformat()}.json"
+        directorio_resumenes = DIRECTORIO_PROYECTO / "resumenes" / "meff"
+
+        resultado_analisis = analizar_dia(
+            fecha=fecha_sesion,
+            ruta_historico=ruta_historico,
+            ruta_anomalias=ruta_anomalias,
+        )
+
+        if resultado_analisis.exito:
+            ruta_md, ruta_json = guardar_resumen(resultado_analisis, directorio_resumenes)
+            logger.info(
+                "Análisis OK — tokens: %d entrada / %d salida — coste estimado: $%.4f USD",
+                resultado_analisis.tokens_input,
+                resultado_analisis.tokens_output,
+                resultado_analisis.coste_estimado_usd,
+            )
+            logger.info("Resumen guardado: %s | %s", ruta_md, ruta_json)
+            sys.exit(0)
+        else:
+            logger.error("FALLO en análisis — %s", resultado_analisis.mensaje)
+            sys.exit(1)
+
+    elif procesar:
         resultado = procesar_meff(fecha)
         if resultado.exito:
             logger.info("OK — %s", resultado.mensaje)
