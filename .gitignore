@@ -2,6 +2,10 @@
 .env
 .env.*
 
+# Claude Code
+.claude/
+CLAUDE.md
+
 # Entorno virtual Python
 .venv/
 venv/
@@ -49,5 +53,5 @@ desktop.ini
 htmlcov/
 
 # Logs
+logs/*.log
 *.log
-logs/

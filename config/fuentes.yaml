@@ -8,27 +8,31 @@
 # los valores. No es necesario modificar ningún archivo Python del core/.
 #
 # Placeholders disponibles para url_plantilla:
-#   {fecha}     → fecha en formato DDMMAAAA  (ej: 06062026)
-#   {fecha_iso} → fecha en formato YYYY-MM-DD (ej: 2026-06-06)
+#   {fecha}     → fecha en formato DDMMAAAA  (ej: 04062026)
+#   {fecha_iso} → fecha en formato YYYY-MM-DD (ej: 2026-06-04)
 #   {anyo}      → año de 4 dígitos           (ej: 2026)
 #   {mes}       → mes de 2 dígitos           (ej: 06)
-#   {dia}       → día de 2 dígitos           (ej: 06)
+#   {dia}       → día de 2 dígitos           (ej: 04)
 # =============================================================================
 
 fuentes:
 
   meff:
-    nombre: "MEFF — Mercado Español de Futuros y Opciones"
+    nombre: "MEFF — Estadísticas Diarias de Derivados"
     descripcion: >
       Estadísticas diarias de volumen negociado y open interest de derivados
       financieros sobre acciones e índices españoles (IBEX 35, acciones individuales).
       Publicado por BME (Bolsas y Mercados Españoles) al cierre de cada sesión.
-    url_plantilla: "https://www.meff.es/docs/Ficheros/Descarga/dRV/RV{fecha}.xlsx"
-    # {fecha} se sustituye por la fecha en formato DDMMAAAA, ej: RV06062026.xlsx
+    # URL derivada del ejemplo real: el placeholder {fecha} sustituye exactamente
+    # los 8 caracteres DDMMAAAA en la posición del nombre de archivo.
+    url_plantilla: "https://www.meff.es/docs/Ficheros/ficherosest/000000000000000000000000{fecha}000000002000000010040003n0000.xlsx"
     formato: xlsx
     parser: meff          # carpeta en fuentes/ que contiene parser.py
     prompt: meff          # carpeta en fuentes/ que contiene prompt.md
     activa: true
+    solo_dias_habiles: true
+    reintentos: 3
+    timeout_segundos: 30
 
   # ---------------------------------------------------------------------------
   # EJEMPLO — cómo añadir una fuente nueva (descomentar y ajustar)
@@ -41,3 +45,6 @@ fuentes:
   #   parser: bmv
   #   prompt: bmv
   #   activa: false
+  #   solo_dias_habiles: true
+  #   reintentos: 3
+  #   timeout_segundos: 30
