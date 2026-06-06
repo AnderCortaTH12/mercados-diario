@@ -1,4 +1,12 @@
 {
   "fecha": "2026-06-03",
-  "anomalias": []
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURCHF",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    }
+  ]
 }

@@ -171,6 +171,34 @@ def formatear_fecha(fecha: date, formato: str = "DDMMAAAA") -> str:
     return mapa[formato](fecha)
 
 
+def dia_habil_anterior(fecha: date) -> date:
+    """Devuelve el día hábil inmediatamente anterior a ``fecha``.
+
+    Args:
+        fecha: Fecha de referencia (no incluida en la búsqueda).
+
+    Returns:
+        El día hábil más reciente estrictamente antes de ``fecha``.
+    """
+    candidato = fecha - timedelta(days=1)
+    while not es_dia_habil(candidato):
+        candidato -= timedelta(days=1)
+    return candidato
+
+
+def existe_resumen(fecha: date, directorio: Path) -> bool:
+    """True si existe el archivo ``{directorio}/{fecha.isoformat()}.md``.
+
+    Args:
+        fecha: Fecha del resumen a comprobar.
+        directorio: Directorio donde se guardan los resúmenes (ej: resumenes/meff/).
+
+    Returns:
+        ``True`` si el archivo .md existe, ``False`` en caso contrario.
+    """
+    return (directorio / f"{fecha.isoformat()}.md").exists()
+
+
 def obtener_api_key() -> str:
     """Lee ANTHROPIC_API_KEY del entorno o del archivo .env en la raíz del proyecto.
 

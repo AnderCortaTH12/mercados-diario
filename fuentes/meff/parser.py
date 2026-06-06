@@ -38,7 +38,9 @@ from core.utils import (
     DIRECTORIO_PROYECTO,
     cargar_configuracion,
     configurar_logging,
+    dia_habil_anterior,
     es_dia_habil,
+    existe_resumen,
     obtener_ultimo_dia_habil,
 )
 
@@ -391,6 +393,121 @@ def procesar_meff(fecha: date | None = None) -> ProcesamientoResultado:
 
 
 # ---------------------------------------------------------------------------
+# Búsqueda inteligente del día pendiente más reciente
+# ---------------------------------------------------------------------------
+
+def buscar_y_procesar_proximo_dia_pendiente(
+    max_dias_atras: int = 3,
+    ruta_resumenes: Path | None = None,
+) -> dict:
+    """Busca el día hábil más reciente sin resumen y lo procesa.
+
+    Estrategia: empieza por el último día hábil y retrocede hasta
+    ``max_dias_atras`` veces si el día ya tiene resumen o la descarga falla.
+
+    Args:
+        max_dias_atras: Número máximo de días hábiles a intentar.
+        ruta_resumenes: Directorio de resúmenes. Por defecto ``resumenes/meff``.
+
+    Returns:
+        Dict con claves ``estado`` (``'procesado'|'todos_al_dia'|'no_disponible'|'error'``),
+        ``fecha_procesada``, ``dias_intentados`` y ``mensaje``.
+    """
+    from core.analizador import analizar_dia, guardar_resumen
+
+    if ruta_resumenes is None:
+        ruta_resumenes = DIRECTORIO_PROYECTO / "resumenes" / "meff"
+
+    candidato = obtener_ultimo_dia_habil()
+    dias_intentados: list[date] = []
+    dias_con_resumen = 0
+
+    for intento in range(max_dias_atras):
+        dias_intentados.append(candidato)
+
+        if existe_resumen(candidato, ruta_resumenes):
+            logger.info(
+                "[%d/%d] %s ya tiene resumen → retrocediendo.",
+                intento + 1, max_dias_atras, candidato.isoformat(),
+            )
+            dias_con_resumen += 1
+            candidato = dia_habil_anterior(candidato)
+            continue
+
+        logger.info(
+            "[%d/%d] Intentando descargar datos de %s...",
+            intento + 1, max_dias_atras, candidato.isoformat(),
+        )
+        resultado_descarga = descargar_meff(candidato)
+
+        if not resultado_descarga.exito:
+            logger.warning(
+                "[%d/%d] Datos de %s no disponibles (%s) → retrocediendo.",
+                intento + 1, max_dias_atras, candidato.isoformat(), resultado_descarga.mensaje,
+            )
+            candidato = dia_habil_anterior(candidato)
+            continue
+
+        resultado_proc = procesar_meff(candidato)
+        if not resultado_proc.exito:
+            return {
+                "estado": "error",
+                "fecha_procesada": None,
+                "dias_intentados": dias_intentados,
+                "mensaje": f"Procesado fallido para {candidato.isoformat()}: {resultado_proc.mensaje}",
+            }
+
+        ruta_historico = DIRECTORIO_PROYECTO / "data" / "meff_historico.csv"
+        ruta_anomalias = (
+            DIRECTORIO_PROYECTO / "data" / "anomalias" / f"{candidato.isoformat()}.json"
+        )
+        resultado_analisis = analizar_dia(
+            fecha=candidato,
+            ruta_historico=ruta_historico,
+            ruta_anomalias=ruta_anomalias,
+        )
+
+        if not resultado_analisis.exito:
+            return {
+                "estado": "error",
+                "fecha_procesada": None,
+                "dias_intentados": dias_intentados,
+                "mensaje": f"Análisis fallido para {candidato.isoformat()}: {resultado_analisis.mensaje}",
+            }
+
+        guardar_resumen(resultado_analisis, ruta_resumenes)
+        logger.info(
+            "Resumen generado para %s — %d tokens, $%.4f USD",
+            candidato.isoformat(),
+            resultado_analisis.tokens_input + resultado_analisis.tokens_output,
+            resultado_analisis.coste_estimado_usd,
+        )
+        return {
+            "estado": "procesado",
+            "fecha_procesada": candidato,
+            "dias_intentados": dias_intentados,
+            "mensaje": f"Resumen generado para {candidato.isoformat()}.",
+        }
+
+    if dias_con_resumen == len(dias_intentados):
+        return {
+            "estado": "todos_al_dia",
+            "fecha_procesada": None,
+            "dias_intentados": dias_intentados,
+            "mensaje": f"Todos los últimos {len(dias_intentados)} días hábiles ya tienen resumen.",
+        }
+    return {
+        "estado": "no_disponible",
+        "fecha_procesada": None,
+        "dias_intentados": dias_intentados,
+        "mensaje": (
+            f"Ningún Excel disponible en los últimos {len(dias_intentados)} días hábiles "
+            f"intentados: {', '.join(d.isoformat() for d in dias_intentados)}."
+        ),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Punto de entrada CLI
 # ---------------------------------------------------------------------------
 
@@ -449,37 +566,63 @@ def main() -> None:
         sys.exit(0 if fallidos == 0 else 1)
 
     elif analizar:
-        # --analizar implica procesar primero
-        resultado_proc = procesar_meff(fecha)
-        if not resultado_proc.exito:
-            logger.error("FALLO en procesamiento — %s", resultado_proc.mensaje)
-            sys.exit(1)
-        logger.info("Procesamiento OK — %s", resultado_proc.mensaje)
-
-        fecha_sesion = resultado_proc.fecha
-        ruta_historico = DIRECTORIO_PROYECTO / "data" / "meff_historico.csv"
-        ruta_anomalias = DIRECTORIO_PROYECTO / "data" / "anomalias" / f"{fecha_sesion.isoformat()}.json"
-        directorio_resumenes = DIRECTORIO_PROYECTO / "resumenes" / "meff"
-
-        resultado_analisis = analizar_dia(
-            fecha=fecha_sesion,
-            ruta_historico=ruta_historico,
-            ruta_anomalias=ruta_anomalias,
-        )
-
-        if resultado_analisis.exito:
-            ruta_md, ruta_json = guardar_resumen(resultado_analisis, directorio_resumenes)
-            logger.info(
-                "Análisis OK — tokens: %d entrada / %d salida — coste estimado: $%.4f USD",
-                resultado_analisis.tokens_input,
-                resultado_analisis.tokens_output,
-                resultado_analisis.coste_estimado_usd,
-            )
-            logger.info("Resumen guardado: %s | %s", ruta_md, ruta_json)
-            sys.exit(0)
+        if fecha is None:
+            # Modo automático: busca el día pendiente más reciente con retry
+            resultado = buscar_y_procesar_proximo_dia_pendiente()
+            estado = resultado["estado"]
+            if estado == "procesado":
+                logger.info("OK — %s", resultado["mensaje"])
+                sys.exit(0)
+            elif estado == "todos_al_dia":
+                logger.info("Sistema al día — %s", resultado["mensaje"])
+                sys.exit(0)
+            elif estado == "no_disponible":
+                logger.warning("Archivos no disponibles — %s", resultado["mensaje"])
+                sys.exit(0)
+            else:  # "error"
+                logger.error("FALLO — %s", resultado["mensaje"])
+                sys.exit(1)
         else:
-            logger.error("FALLO en análisis — %s", resultado_analisis.mensaje)
-            sys.exit(1)
+            # Modo explícito: el usuario especificó una fecha concreta
+            directorio_resumenes = DIRECTORIO_PROYECTO / "resumenes" / "meff"
+            if existe_resumen(fecha, directorio_resumenes):
+                logger.warning(
+                    "El resumen de %s ya existe en %s. No se reprocesa.",
+                    fecha.isoformat(), directorio_resumenes,
+                )
+                sys.exit(0)
+
+            resultado_proc = procesar_meff(fecha)
+            if not resultado_proc.exito:
+                logger.error("FALLO en procesamiento — %s", resultado_proc.mensaje)
+                sys.exit(1)
+            logger.info("Procesamiento OK — %s", resultado_proc.mensaje)
+
+            fecha_sesion = resultado_proc.fecha
+            ruta_historico = DIRECTORIO_PROYECTO / "data" / "meff_historico.csv"
+            ruta_anomalias = (
+                DIRECTORIO_PROYECTO / "data" / "anomalias" / f"{fecha_sesion.isoformat()}.json"
+            )
+
+            resultado_analisis = analizar_dia(
+                fecha=fecha_sesion,
+                ruta_historico=ruta_historico,
+                ruta_anomalias=ruta_anomalias,
+            )
+
+            if resultado_analisis.exito:
+                ruta_md, ruta_json = guardar_resumen(resultado_analisis, directorio_resumenes)
+                logger.info(
+                    "Análisis OK — tokens: %d entrada / %d salida — coste estimado: $%.4f USD",
+                    resultado_analisis.tokens_input,
+                    resultado_analisis.tokens_output,
+                    resultado_analisis.coste_estimado_usd,
+                )
+                logger.info("Resumen guardado: %s | %s", ruta_md, ruta_json)
+                sys.exit(0)
+            else:
+                logger.error("FALLO en análisis — %s", resultado_analisis.mensaje)
+                sys.exit(1)
 
     elif procesar:
         resultado = procesar_meff(fecha)

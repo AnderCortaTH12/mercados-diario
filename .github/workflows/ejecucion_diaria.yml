@@ -75,14 +75,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/meff_historico.csv data/anomalias/ resumenes/meff/
+          git add data/meff_historico.csv data/anomalias/ resumenes/meff/ || true
           if git diff --staged --quiet; then
-            echo "No hay cambios que commitear (¿fin de semana o festivo?)"
-          else
-            FECHA=$(date -u +"%Y-%m-%d")
-            git commit -m "Resumen automático MEFF $FECHA"
-            git push
+            echo "::notice::No hay cambios que commitear — sistema al día o datos no publicados aún."
+            exit 0
           fi
+          FECHA=$(date -u +"%Y-%m-%d")
+          git commit -m "Resumen automático MEFF $FECHA"
+          git push
 
       - name: Subir logs como artifact (siempre, incluso si falla)
         if: always()

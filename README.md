@@ -172,6 +172,28 @@ No se requiere ninguna integración adicional con servicios externos.
 
 ---
 
+## Comportamiento ante archivos no disponibles
+
+El sistema, en **modo automático** (`--analizar` sin fecha), nunca falla el workflow por datos no publicados aún. Usa una estrategia de *retry hacia atrás*:
+
+1. Calcula el último día hábil (ej: viernes si hoy es sábado).
+2. Si ese día ya tiene resumen → retrocede al día hábil anterior.
+3. Si la descarga falla (404, MEFF no ha publicado el archivo) → retrocede al día hábil anterior.
+4. Repite hasta 3 días hábiles hacia atrás.
+
+| Resultado tras los intentos | Estado | Código de salida |
+|-----------------------------|--------|-----------------|
+| Se descargó y procesó un día | `procesado` | 0 |
+| Todos los días ya tenían resumen | `todos_al_dia` | 0 |
+| Ningún Excel disponible | `no_disponible` *(WARNING)* | 0 |
+| Error real (parseo, análisis IA) | `error` | 1 |
+
+En **modo explícito** (se pasa una fecha concreta), el comportamiento es estricto:
+- Si el resumen ya existe → WARNING + exit 0 (no reprocesa).
+- Si la descarga falla → exit 1 (el usuario especificó la fecha, es su responsabilidad).
+
+---
+
 ## Variables de entorno
 
 | Variable | Requerida | Descripción |
