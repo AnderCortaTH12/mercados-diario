@@ -79,17 +79,13 @@ def _layout_base(titulo: str, horizontal: bool = False) -> go.Layout:
 def _a_img(fig: go.Figure, titulo: str) -> str:
     """Convierte una figura Plotly en PNG base64 embebible en Markdown.
 
-    Usa kaleido para renderizar a doble resolución (scale=2) y obtiene
-    imágenes nítidas en pantallas retina. El resultado es un tag <img>
-    autocontenido, sin dependencias externas ni scripts.
+    Usa kaleido para renderizar a doble resolución (scale=2). El resultado
+    es sintaxis nativa Markdown ![]() compatible con cualquier renderer
+    (Astro, GitHub, VS Code) sin necesidad de allowDangerousHtml ni scripts.
     """
     img_bytes = fig.to_image(format="png", width=900, height=380, scale=2)
     img_b64 = base64.b64encode(img_bytes).decode("utf-8")
-    return (
-        f'<img src="data:image/png;base64,{img_b64}" '
-        f'alt="{titulo}" '
-        f'style="width:100%; max-width:900px; height:auto; margin:24px 0;" />'
-    )
+    return f"![{titulo}](data:image/png;base64,{img_b64})"
 
 
 # ---------------------------------------------------------------------------
