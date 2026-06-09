@@ -8,6 +8,7 @@ este módulo ejecuta esas especificaciones.
 
 from __future__ import annotations
 
+import base64
 import json
 import logging
 import re
@@ -17,6 +18,7 @@ from typing import Optional
 
 import pandas as pd
 import plotly.graph_objects as go
+import plotly.io as pio
 
 logger = logging.getLogger(__name__)
 
@@ -74,12 +76,19 @@ def _layout_base(titulo: str, horizontal: bool = False) -> go.Layout:
     )
 
 
-def _a_html(fig: go.Figure) -> str:
-    """Convierte una figura Plotly en HTML inline con CDN."""
-    return fig.to_html(
-        full_html=False,
-        include_plotlyjs="cdn",
-        config={"responsive": True, "displayModeBar": False},
+def _a_img(fig: go.Figure, titulo: str) -> str:
+    """Convierte una figura Plotly en PNG base64 embebible en Markdown.
+
+    Usa kaleido para renderizar a doble resolución (scale=2) y obtiene
+    imágenes nítidas en pantallas retina. El resultado es un tag <img>
+    autocontenido, sin dependencias externas ni scripts.
+    """
+    img_bytes = fig.to_image(format="png", width=900, height=380, scale=2)
+    img_b64 = base64.b64encode(img_bytes).decode("utf-8")
+    return (
+        f'<img src="data:image/png;base64,{img_b64}" '
+        f'alt="{titulo}" '
+        f'style="width:100%; max-width:900px; height:auto; margin:24px 0;" />'
     )
 
 
@@ -141,7 +150,7 @@ def generar_top_movers_oi(df: pd.DataFrame, fecha: date, titulo: str, top_n: int
         layout=_layout_base(titulo, horizontal=True),
     )
     fig.update_layout(yaxis=dict(categoryorder="array", categoryarray=etiquetas))
-    return _a_html(fig)
+    return _a_img(fig, titulo)
 
 
 def generar_evolucion_volumen(df: pd.DataFrame, fecha: date, titulo: str, dias: int = 10) -> str:
@@ -203,7 +212,7 @@ def generar_evolucion_volumen(df: pd.DataFrame, fecha: date, titulo: str, dias: 
         layout=_layout_base(titulo, horizontal=False),
     )
     fig.update_layout(xaxis=dict(showgrid=False, tickangle=-30))
-    return _a_html(fig)
+    return _a_img(fig, titulo)
 
 
 def generar_distribucion_categorias(df: pd.DataFrame, fecha: date, titulo: str) -> str:
@@ -253,7 +262,7 @@ def generar_distribucion_categorias(df: pd.DataFrame, fecha: date, titulo: str) 
         )],
         layout=_layout_base(titulo, horizontal=True),
     )
-    return _a_html(fig)
+    return _a_img(fig, titulo)
 
 
 # ---------------------------------------------------------------------------

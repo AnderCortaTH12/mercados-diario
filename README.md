@@ -210,13 +210,13 @@ En GitHub Actions, añade la variable como Secret en Settings → Secrets → Ac
 
 ---
 
-## Gráficos interactivos
+## Gráficos estáticos
 
-Cada resumen diario incluye 2-3 gráficos interactivos HTML generados automáticamente con [Plotly](https://plotly.com/python/).
+Cada resumen diario incluye 2-3 gráficos generados automáticamente con [Plotly](https://plotly.com/python/) + [kaleido](https://github.com/plotly/Kaleido), embebidos como PNG en base64 directamente en el Markdown.
 
 ### Motor de renderizado
 
-Plotly genera HTML inline con JavaScript desde CDN (`cdn.plot.ly`). Los gráficos se embeben directamente en el `.md` del resumen como bloques HTML, por lo que el portfolio los renderiza sin archivos adicionales ni servidor.
+Plotly construye la figura y kaleido la exporta a PNG a doble resolución (scale=2, 1800×760px). El PNG se codifica en base64 y se inserta como tag `<img src="data:image/png;base64,...">` en el `.md`. Este enfoque es robusto frente a cualquier sanitizador de HTML o CSP de hosting: funciona en GitHub web, Astro, GitHub Pages, y cualquier visor de Markdown sin dependencias externas ni scripts.
 
 ### Cómo Claude decide qué gráficos generar
 

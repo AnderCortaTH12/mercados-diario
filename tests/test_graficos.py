@@ -80,8 +80,8 @@ def test_generar_top_movers_oi():
 
     assert isinstance(html, str)
     assert len(html) > 0
-    assert "<div" in html
-    assert "plotly" in html.lower()
+    assert "<img" in html
+    assert "data:image/png;base64," in html
 
 
 def test_generar_top_movers_oi_sin_columna_variacion():
@@ -108,8 +108,8 @@ def test_generar_evolucion_volumen():
 
     assert isinstance(html, str)
     assert len(html) > 0
-    assert "<div" in html
-    assert "plotly" in html.lower()
+    assert "<img" in html
+    assert "data:image/png;base64," in html
 
 
 def test_generar_evolucion_volumen_datos_insuficientes():
@@ -129,8 +129,8 @@ def test_generar_distribucion_categorias():
 
     assert isinstance(html, str)
     assert len(html) > 0
-    assert "<div" in html
-    assert "plotly" in html.lower()
+    assert "<img" in html
+    assert "data:image/png;base64," in html
 
 
 def test_generar_distribucion_sin_datos():
@@ -214,7 +214,7 @@ def test_generar_graficos_segun_spec():
     assert "top_movers_oi" in resultado
     assert "evolucion_volumen" in resultado
     assert "distribucion_categorias" in resultado
-    assert all("<div" in html for html in resultado.values())
+    assert all("data:image/png;base64," in html for html in resultado.values())
 
 
 def test_generar_graficos_tipo_desconocido():
