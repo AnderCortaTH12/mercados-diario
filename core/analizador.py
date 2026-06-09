@@ -21,6 +21,11 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 
+from core.graficos import (
+    generar_graficos_segun_spec,
+    insertar_graficos_en_md,
+    parsear_specs_graficos,
+)
 from core.utils import DIRECTORIO_PROYECTO
 
 logger = logging.getLogger(__name__)
@@ -255,7 +260,7 @@ def analizar_dia(
     ruta_historico: Path,
     ruta_anomalias: Path,
     modelo: str = MODELO_DEFAULT,
-    max_tokens: int = 2000,
+    max_tokens: int = 2500,
 ) -> AnalisisResultado:
     """Pipeline completo: carga datos, construye contexto, llama a Claude, devuelve resultado.
 
@@ -331,7 +336,7 @@ def analizar_dia(
     tokens_input = respuesta.usage.input_tokens
     tokens_output = respuesta.usage.output_tokens
     coste = (tokens_input * PRECIO_INPUT_POR_MTOKEN + tokens_output * PRECIO_OUTPUT_POR_MTOKEN) / 1_000_000
-    texto = respuesta.content[0].text
+    texto_raw = respuesta.content[0].text
 
     logger.info(
         "Claude respondió: %d tokens entrada, %d tokens salida, coste estimado $%.4f USD "
@@ -343,6 +348,25 @@ def analizar_dia(
         tokens_input - tokens_ctx_estimados,
     )
 
+    # Extraer specs de gráficos y limpiar el bloque del texto
+    specs, texto = parsear_specs_graficos(texto_raw)
+
+    graficos_html: dict[str, str] = {}
+    if specs:
+        try:
+            graficos_html = generar_graficos_segun_spec(specs, df_metricas, fecha)
+            logger.info(
+                "Gráficos generados: %d (%s)",
+                len(graficos_html),
+                ", ".join(graficos_html.keys()),
+            )
+        except Exception as exc:
+            logger.warning("Error en generación de gráficos: %s — continuando sin gráficos", exc)
+    else:
+        logger.info("Gráficos generados: 0 (Claude no incluyó especificaciones)")
+
+    texto = insertar_graficos_en_md(texto, graficos_html)
+
     resumen_json = {
         "fecha": fecha.isoformat(),
         "modelo": modelo,
@@ -351,6 +375,7 @@ def analizar_dia(
         "coste_estimado_usd": round(coste, 6),
         "tokens_contexto_estimados": tokens_ctx_estimados,
         "chars_contexto": chars_contexto,
+        "graficos_generados": list(graficos_html.keys()),
         "resumen": texto,
     }
 

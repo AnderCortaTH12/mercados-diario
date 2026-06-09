@@ -210,6 +210,45 @@ En GitHub Actions, añade la variable como Secret en Settings → Secrets → Ac
 
 ---
 
+## Gráficos interactivos
+
+Cada resumen diario incluye 2-3 gráficos interactivos HTML generados automáticamente con [Plotly](https://plotly.com/python/).
+
+### Motor de renderizado
+
+Plotly genera HTML inline con JavaScript desde CDN (`cdn.plot.ly`). Los gráficos se embeben directamente en el `.md` del resumen como bloques HTML, por lo que el portfolio los renderiza sin archivos adicionales ni servidor.
+
+### Cómo Claude decide qué gráficos generar
+
+El prompt instruye a Claude a evaluar la sesión y emitir al final de su respuesta un bloque JSON delimitado con las especificaciones de los gráficos a generar:
+
+```
+===GRAFICOS===
+{ "graficos": [ { "tipo": "...", "titulo": "...", "parametros": {...} } ] }
+===FIN GRAFICOS===
+```
+
+Las reglas son:
+- **`top_movers_oi`** — si hay movimientos de Open Interest >15% en algún subyacente
+- **`evolucion_volumen`** — si el volumen del día se desvía claramente de la media
+- **`distribucion_categorias`** — si la distribución por familia de producto es muy desigual
+
+El sistema parsea el bloque, lo elimina del texto final y genera los gráficos correspondientes.
+
+### Tipos de gráficos disponibles
+
+| Tipo | Descripción | Posición en el resumen |
+|------|-------------|------------------------|
+| `evolucion_volumen` | Línea temporal del volumen total últimos N días | Tras "RESUMEN DEL MERCADO" |
+| `top_movers_oi` | Barras horizontales con los mayores movimientos de OI | Tras "LECTURA DEL OPEN INTEREST" |
+| `distribucion_categorias` | Volumen del día por familia de derivado | Antes de "WHAT TO WATCH" |
+
+### Coste adicional estimado
+
+El bloque JSON de especificaciones añade ~150–300 tokens de salida por resumen, un incremento de aproximadamente **+$0,005 por ejecución (~+15% sobre el coste base)**.
+
+---
+
 ## Coste estimado
 
 Cada resumen generado con `--analizar` consume aproximadamente:
@@ -217,7 +256,7 @@ Cada resumen generado con `--analizar` consume aproximadamente:
 | Componente | Tokens típicos | Coste (claude-sonnet-4-5) |
 |------------|---------------|--------------------------|
 | Prompt + contexto (entrada) | ~1.500–2.500 | ~$0,005–$0,008 |
-| Resumen generado (salida) | ~400–700 | ~$0,006–$0,011 |
-| **Total por ejecución** | | **~$0,01–$0,03** |
+| Resumen generado (salida) | ~500–900 | ~$0,008–$0,014 |
+| **Total por ejecución** | | **~$0,013–$0,035** |
 
 Precios de referencia: $3,00/MTok entrada · $15,00/MTok salida.

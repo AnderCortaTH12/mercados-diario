@@ -70,3 +70,40 @@ Solo si se detectaron anomalías en los datos:
 3. Redondea cifras grandes a miles (K) o millones (M) cuando mejore la legibilidad.
 4. Si el histórico es insuficiente para calcular una métrica (menos de 5 sesiones), indícalo brevemente y omite la comparación.
 5. Escribe en español formal financiero. Usa puntos para separar miles y comas para decimales (estándar español).
+
+---
+
+## Gráficos interactivos
+
+Tras escribir el resumen, decide qué 2-3 gráficos serían más informativos para complementarlo. Devuelve al final de tu respuesta, en un bloque separado claramente delimitado, un JSON con esta estructura exacta:
+
+===GRAFICOS===
+{
+  "graficos": [
+    {
+      "tipo": "evolucion_volumen",
+      "titulo": "El volumen del MEFF se dispara un 166% sobre la media",
+      "parametros": {"dias": 10}
+    },
+    {
+      "tipo": "top_movers_oi",
+      "titulo": "Los 5 mayores movimientos de Open Interest de la sesión",
+      "parametros": {"top_n": 5}
+    }
+  ]
+}
+===FIN GRAFICOS===
+
+**Tipos disponibles:**
+- `top_movers_oi`: para destacar los N subyacentes con mayor variación de Open Interest en el día
+- `evolucion_volumen`: para mostrar la tendencia temporal del volumen agregado total
+- `distribucion_categorias`: para visualizar el reparto del volumen por familia de derivado (FUTURES IBEX 35, OPTIONS STOCK, etc.)
+
+**Reglas para decidir qué gráficos incluir:**
+- Si hay un movimiento de OI excepcional (>15% en algún subyacente) → incluye `top_movers_oi`
+- Si el volumen del día está claramente por encima o por debajo de la media de los días anteriores → incluye `evolucion_volumen`
+- Si la distribución del día es muy desigual entre familias de productos → incluye `distribucion_categorias`
+- En sesiones rutinarias sin anomalías destacadas, omite los gráficos o incluye solo `distribucion_categorias`
+- El título de cada gráfico debe ser la conclusión analítica de ese gráfico, no la descripción de los ejes (ejemplo correcto: "El volumen colapsa un 83% respecto a la media"; incorrecto: "Volumen diario últimos 10 días")
+
+**Importante:** El bloque `===GRAFICOS===` ... `===FIN GRAFICOS===` NO aparece en el resumen final; es procesado automáticamente por el sistema. Escríbelo siempre al final, después de `## WHAT TO WATCH`.
