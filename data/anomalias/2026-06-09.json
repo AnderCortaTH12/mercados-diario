@@ -1,0 +1,12 @@
+{
+  "fecha": "2026-06-09",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "AENA",
+      "valor": 99.97,
+      "contexto": "Open Interest varió +100.0% respecto al día anterior"
+    }
+  ]
+}
