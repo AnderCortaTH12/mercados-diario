@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-06-10",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 22.27,
+      "contexto": "Open Interest varió +22.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "OHLA",
+      "valor": -31.06,
+      "contexto": "Open Interest varió -31.1% respecto al día anterior"
+    }
+  ]
+}
