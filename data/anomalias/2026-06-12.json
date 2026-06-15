@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-06-12",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AENA",
+      "valor": -28.0,
+      "contexto": "Open Interest varió -28.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IBE",
+      "valor": 30.36,
+      "contexto": "Open Interest varió +30.4% respecto al día anterior"
+    }
+  ]
+}
