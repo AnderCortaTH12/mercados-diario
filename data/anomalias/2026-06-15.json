@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-06-15",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES IBEX 35",
+      "underlying_asset": null,
+      "valor": 44.63,
+      "contexto": "Open Interest varió +44.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES INDEX TOTAL",
+      "underlying_asset": null,
+      "valor": 44.65,
+      "contexto": "Open Interest varió +44.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": 88.89,
+      "contexto": "Open Interest varió +88.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BBVA",
+      "valor": 38.31,
+      "contexto": "Open Interest varió +38.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ITX",
+      "valor": 81.26,
+      "contexto": "Open Interest varió +81.3% respecto al día anterior"
+    }
+  ]
+}
