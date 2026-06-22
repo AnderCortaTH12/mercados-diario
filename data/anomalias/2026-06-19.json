@@ -1,0 +1,404 @@
+{
+  "fecha": "2026-06-19",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": -27.14,
+      "contexto": "Open Interest varió -27.1% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACX",
+      "valor": -50.0,
+      "contexto": "Open Interest varió -50.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AENA",
+      "valor": -94.44,
+      "contexto": "Open Interest varió -94.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AMS",
+      "valor": -99.25,
+      "contexto": "Open Interest varió -99.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ANA",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BBVA",
+      "valor": -51.44,
+      "contexto": "Open Interest varió -51.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BKT",
+      "valor": -91.53,
+      "contexto": "Open Interest varió -91.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CABK",
+      "valor": -94.04,
+      "contexto": "Open Interest varió -94.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CIE",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CLNX",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "COL",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ELE",
+      "valor": -98.25,
+      "contexto": "Open Interest varió -98.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "FER",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "GRF",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IAG",
+      "valor": -75.0,
+      "contexto": "Open Interest varió -75.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IBE",
+      "valor": -38.06,
+      "contexto": "Open Interest varió -38.1% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IDR",
+      "valor": -91.04,
+      "contexto": "Open Interest varió -91.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ITX",
+      "valor": -47.03,
+      "contexto": "Open Interest varió -47.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MAP",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "PUIG",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "RED",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ROVI",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "SAB",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "SLR",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": -99.99,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "UNI",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK DIVIDEND",
+      "underlying_asset": "SAND",
+      "valor": -80.63,
+      "contexto": "Open Interest varió -80.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK DIVIDEND TOTAL",
+      "underlying_asset": null,
+      "valor": -71.36,
+      "contexto": "Open Interest varió -71.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": -44.44,
+      "contexto": "Open Interest varió -44.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "A3M",
+      "valor": -75.46,
+      "contexto": "Open Interest varió -75.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ACS",
+      "valor": -24.21,
+      "contexto": "Open Interest varió -24.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ACX",
+      "valor": -26.4,
+      "contexto": "Open Interest varió -26.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ALM",
+      "valor": -51.72,
+      "contexto": "Open Interest varió -51.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ANA",
+      "valor": -83.35,
+      "contexto": "Open Interest varió -83.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ANE",
+      "valor": -21.74,
+      "contexto": "Open Interest varió -21.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CABK",
+      "valor": -24.89,
+      "contexto": "Open Interest varió -24.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CIE",
+      "valor": -63.89,
+      "contexto": "Open Interest varió -63.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CLNX",
+      "valor": -29.27,
+      "contexto": "Open Interest varió -29.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "EBRO",
+      "valor": -60.0,
+      "contexto": "Open Interest varió -60.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ENC",
+      "valor": -67.57,
+      "contexto": "Open Interest varió -67.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ENG",
+      "valor": -69.33,
+      "contexto": "Open Interest varió -69.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FER",
+      "valor": -72.84,
+      "contexto": "Open Interest varió -72.8% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "IBE",
+      "valor": -28.69,
+      "contexto": "Open Interest varió -28.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "IDR",
+      "valor": -37.84,
+      "contexto": "Open Interest varió -37.8% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ITX",
+      "valor": -28.51,
+      "contexto": "Open Interest varió -28.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "MTS",
+      "valor": -45.67,
+      "contexto": "Open Interest varió -45.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "NTGY",
+      "valor": -58.84,
+      "contexto": "Open Interest varió -58.8% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "PHM",
+      "valor": -27.62,
+      "contexto": "Open Interest varió -27.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "RED",
+      "valor": -56.92,
+      "contexto": "Open Interest varió -56.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SLR",
+      "valor": -57.02,
+      "contexto": "Open Interest varió -57.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TEF",
+      "valor": -28.73,
+      "contexto": "Open Interest varió -28.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TRE",
+      "valor": -78.48,
+      "contexto": "Open Interest varió -78.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "VID",
+      "valor": -31.67,
+      "contexto": "Open Interest varió -31.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "VIS",
+      "valor": -22.3,
+      "contexto": "Open Interest varió -22.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK TOTAL",
+      "underlying_asset": null,
+      "valor": -22.05,
+      "contexto": "Open Interest varió -22.0% respecto al día anterior"
+    }
+  ]
+}
