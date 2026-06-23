@@ -1,0 +1,61 @@
+{
+  "fecha": "2026-06-22",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACX",
+      "valor": 685.71,
+      "contexto": "Open Interest varió +685.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BKT",
+      "valor": 150.0,
+      "contexto": "Open Interest varió +150.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CABK",
+      "valor": 55.56,
+      "contexto": "Open Interest varió +55.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IAG",
+      "valor": 900.0,
+      "contexto": "Open Interest varió +900.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IDR",
+      "valor": 166.67,
+      "contexto": "Open Interest varió +166.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 766.67,
+      "contexto": "Open Interest varió +766.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "EBRO",
+      "valor": 25.0,
+      "contexto": "Open Interest varió +25.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TEF",
+      "valor": 29.84,
+      "contexto": "Open Interest varió +29.8% respecto al día anterior"
+    }
+  ]
+}
