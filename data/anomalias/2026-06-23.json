@@ -1,0 +1,68 @@
+{
+  "fecha": "2026-06-23",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES INDEX IBEX 35 DIVIDEND",
+      "underlying_asset": null,
+      "valor": 34.25,
+      "contexto": "Open Interest varió +34.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BKT",
+      "valor": 40.0,
+      "contexto": "Open Interest varió +40.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ELE",
+      "valor": 100.0,
+      "contexto": "Open Interest varió +100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": 33.33,
+      "contexto": "Open Interest varió +33.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDCHF",
+      "valor": 25.0,
+      "contexto": "Open Interest varió +25.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS INDEX IBEX 35",
+      "underlying_asset": null,
+      "valor": 20.91,
+      "contexto": "Open Interest varió +20.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS INDEX IBEX 35 TOTAL",
+      "underlying_asset": null,
+      "valor": 20.91,
+      "contexto": "Open Interest varió +20.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CIE",
+      "valor": 62.5,
+      "contexto": "Open Interest varió +62.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "OHLA",
+      "valor": 29.53,
+      "contexto": "Open Interest varió +29.5% respecto al día anterior"
+    }
+  ]
+}
