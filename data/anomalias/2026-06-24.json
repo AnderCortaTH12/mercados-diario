@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-06-24",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 26.92,
+      "contexto": "Open Interest varió +26.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDJPY",
+      "valor": 22.22,
+      "contexto": "Open Interest varió +22.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "MAP",
+      "valor": 229.42,
+      "contexto": "Open Interest varió +229.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "MRL",
+      "valor": -34.73,
+      "contexto": "Open Interest varió -34.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TRE",
+      "valor": 148.83,
+      "contexto": "Open Interest varió +148.8% respecto al día anterior"
+    }
+  ]
+}
