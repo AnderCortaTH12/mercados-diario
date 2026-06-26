@@ -1,0 +1,12 @@
+{
+  "fecha": "2026-06-25",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BKT",
+      "valor": -28.57,
+      "contexto": "Open Interest varió -28.6% respecto al día anterior"
+    }
+  ]
+}
