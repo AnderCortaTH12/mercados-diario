@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-06-29",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AMS",
+      "valor": -50.0,
+      "contexto": "Open Interest varió -50.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 30.3,
+      "contexto": "Open Interest varió +30.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING STOCK",
+      "underlying_asset": "AMS",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "actividad_nueva",
+      "contract_group": "FUTURES XROLLING STOCK",
+      "underlying_asset": "AMS",
+      "valor": 2000.0,
+      "contexto": "Actividad nueva: 2000 contratos negociados (open interest previo era 0)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING STOCK TOTAL",
+      "underlying_asset": null,
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "actividad_nueva",
+      "contract_group": "FUTURES XROLLING STOCK TOTAL",
+      "underlying_asset": null,
+      "valor": 2000.0,
+      "contexto": "Actividad nueva: 2000 contratos negociados (open interest previo era 0)"
+    }
+  ]
+}
