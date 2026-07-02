@@ -1,0 +1,75 @@
+{
+  "fecha": "2026-07-01",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": 100.0,
+      "contexto": "Open Interest varió +100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 44.19,
+      "contexto": "Open Interest varió +44.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURAUD",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": 2.99,
+      "contexto": "Volumen del día a +3.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDCHF",
+      "valor": 4.22,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX TOTAL",
+      "underlying_asset": null,
+      "valor": 2.36,
+      "contexto": "Volumen del día a +2.4 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ANE",
+      "valor": 35.14,
+      "contexto": "Open Interest varió +35.1% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ANE",
+      "valor": 3.83,
+      "contexto": "Volumen del día a +3.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CIE",
+      "valor": 26.87,
+      "contexto": "Open Interest varió +26.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FCC",
+      "valor": 3.37,
+      "contexto": "Volumen del día a +3.4 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
