@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-07-06",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ELE",
+      "valor": -33.33,
+      "contexto": "Open Interest varió -33.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS INDEX IBEX 35",
+      "underlying_asset": null,
+      "valor": 34.55,
+      "contexto": "Open Interest varió +34.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS INDEX IBEX 35",
+      "underlying_asset": null,
+      "valor": 3.77,
+      "contexto": "Volumen del día a +3.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS INDEX IBEX 35 TOTAL",
+      "underlying_asset": null,
+      "valor": 34.55,
+      "contexto": "Open Interest varió +34.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS INDEX IBEX 35 TOTAL",
+      "underlying_asset": null,
+      "valor": 3.77,
+      "contexto": "Volumen del día a +3.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "EBRO",
+      "valor": 60.0,
+      "contexto": "Open Interest varió +60.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "EBRO",
+      "valor": 3.18,
+      "contexto": "Volumen del día a +3.2 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
