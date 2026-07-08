@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-07-07",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ENC",
+      "valor": 83.33,
+      "contexto": "Open Interest varió +83.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ENC",
+      "valor": 2.32,
+      "contexto": "Volumen del día a +2.3 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
