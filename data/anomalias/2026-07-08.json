@@ -1,0 +1,68 @@
+{
+  "fecha": "2026-07-08",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AMS",
+      "valor": -25.0,
+      "contexto": "Open Interest varió -25.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MAP",
+      "valor": 141.46,
+      "contexto": "Open Interest varió +141.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURJPY",
+      "valor": 45.45,
+      "contexto": "Open Interest varió +45.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURJPY",
+      "valor": 4.16,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDJPY",
+      "valor": 2.18,
+      "contexto": "Volumen del día a +2.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "AMS",
+      "valor": 2.01,
+      "contexto": "Volumen del día a +2.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CABK",
+      "valor": 2.49,
+      "contexto": "Volumen del día a +2.5 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CLNX",
+      "valor": 3.3,
+      "contexto": "Volumen del día a +3.3 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "MEL",
+      "valor": 3.37,
+      "contexto": "Volumen del día a +3.4 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
