@@ -1,0 +1,61 @@
+{
+  "fecha": "2026-07-13",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES IBEX 35",
+      "underlying_asset": null,
+      "valor": 35.97,
+      "contexto": "Open Interest varió +36.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES INDEX TOTAL",
+      "underlying_asset": null,
+      "valor": 35.45,
+      "contexto": "Open Interest varió +35.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": 73.92,
+      "contexto": "Open Interest varió +73.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": 2.82,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 69.44,
+      "contexto": "Open Interest varió +69.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FER",
+      "valor": 27.87,
+      "contexto": "Open Interest varió +27.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TEF",
+      "valor": 2.89,
+      "contexto": "Volumen del día a +2.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK TOTAL",
+      "underlying_asset": null,
+      "valor": 2.2,
+      "contexto": "Volumen del día a +2.2 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
