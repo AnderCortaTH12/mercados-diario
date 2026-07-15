@@ -1,0 +1,61 @@
+{
+  "fecha": "2026-07-14",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES IBEX 35",
+      "underlying_asset": null,
+      "valor": 3.03,
+      "contexto": "Volumen del día a +3.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES INDEX TOTAL",
+      "underlying_asset": null,
+      "valor": 2.95,
+      "contexto": "Volumen del día a +2.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": -23.6,
+      "contexto": "Open Interest varió -23.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ACX",
+      "valor": 2.77,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ELE",
+      "valor": 2.17,
+      "contexto": "Volumen del día a +2.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "OHLA",
+      "valor": 95.52,
+      "contexto": "Open Interest varió +95.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "OHLA",
+      "valor": 4.14,
+      "contexto": "Volumen del día a +4.1 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ROVI",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
