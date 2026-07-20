@@ -1,0 +1,68 @@
+{
+  "fecha": "2026-07-17",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES IBEX 35",
+      "underlying_asset": null,
+      "valor": -20.67,
+      "contexto": "Open Interest varió -20.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": -20.93,
+      "contexto": "Open Interest varió -20.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ELE",
+      "valor": 100.0,
+      "contexto": "Open Interest varió +100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "AENA",
+      "valor": -59.07,
+      "contexto": "Open Interest varió -59.1% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ALM",
+      "valor": 631.47,
+      "contexto": "Open Interest varió +631.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ALM",
+      "valor": 4.22,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "OHLA",
+      "valor": -26.31,
+      "contexto": "Open Interest varió -26.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SLR",
+      "valor": -40.0,
+      "contexto": "Open Interest varió -40.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TRE",
+      "valor": -59.28,
+      "contexto": "Open Interest varió -59.3% respecto al día anterior"
+    }
+  ]
+}
