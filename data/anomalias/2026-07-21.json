@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-07-21",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CLNX",
+      "valor": 2.12,
+      "contexto": "Volumen del día a +2.1 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "TEF",
+      "valor": 26.79,
+      "contexto": "Open Interest varió +26.8% respecto al día anterior"
+    }
+  ]
+}
