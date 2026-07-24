@@ -1,0 +1,82 @@
+{
+  "fecha": "2026-07-23",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": 100.0,
+      "contexto": "Open Interest varió +100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": 3.07,
+      "contexto": "Volumen del día a +3.1 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IDR",
+      "valor": 41.98,
+      "contexto": "Open Interest varió +42.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IDR",
+      "valor": 4.21,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": 40.0,
+      "contexto": "Open Interest varió +40.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "NTGY",
+      "valor": 4.23,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURCHF",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURJPY",
+      "valor": 34.78,
+      "contexto": "Open Interest varió +34.8% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURJPY",
+      "valor": 2.8,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CLNX",
+      "valor": 4.16,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SLR",
+      "valor": 28.09,
+      "contexto": "Open Interest varió +28.1% respecto al día anterior"
+    }
+  ]
+}
