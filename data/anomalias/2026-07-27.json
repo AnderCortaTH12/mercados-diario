@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-07-27",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES INDEX IBEX 35 DIVIDEND",
+      "underlying_asset": null,
+      "valor": 4.06,
+      "contexto": "Volumen del día a +4.1 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": 136.36,
+      "contexto": "Open Interest varió +136.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": 3.8,
+      "contexto": "Volumen del día a +3.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "GRF",
+      "valor": 30.0,
+      "contexto": "Open Interest varió +30.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "GRF",
+      "valor": 2.04,
+      "contexto": "Volumen del día a +2.0 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
