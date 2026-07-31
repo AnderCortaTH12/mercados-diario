@@ -1,0 +1,33 @@
+{
+  "fecha": "2026-07-30",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDJPY",
+      "valor": 2.28,
+      "contexto": "Volumen del día a +2.3 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "REP",
+      "valor": 3.5,
+      "contexto": "Volumen del día a +3.5 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SLR",
+      "valor": 642.11,
+      "contexto": "Open Interest varió +642.1% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SLR",
+      "valor": 4.22,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
