@@ -1,0 +1,47 @@
+{
+  "fecha": "2026-08-06",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "GRF",
+      "valor": 50.0,
+      "contexto": "Open Interest varió +50.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "GRF",
+      "valor": 3.4,
+      "contexto": "Volumen del día a +3.4 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": -21.28,
+      "contexto": "Open Interest varió -21.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURCHF",
+      "valor": 2.92,
+      "contexto": "Volumen del día a +2.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "A3M",
+      "valor": 2.8,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "CIE",
+      "valor": 3.57,
+      "contexto": "Volumen del día a +3.6 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
