@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-08-11",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": -50.0,
+      "contexto": "Open Interest varió -50.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDJPY",
+      "valor": 33.33,
+      "contexto": "Open Interest varió +33.3% respecto al día anterior"
+    }
+  ]
+}
