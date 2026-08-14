@@ -1,0 +1,33 @@
+{
+  "fecha": "2026-08-13",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IBE",
+      "valor": 2.69,
+      "contexto": "Volumen del día a +2.7 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "IAG",
+      "valor": 2.4,
+      "contexto": "Volumen del día a +2.4 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "IDR",
+      "valor": 2.78,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "MEL",
+      "valor": 3.38,
+      "contexto": "Volumen del día a +3.4 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
