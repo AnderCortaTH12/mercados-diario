@@ -1,0 +1,75 @@
+{
+  "fecha": "2026-08-19",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": 33.18,
+      "contexto": "Open Interest varió +33.2% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES MINI IBEX 35",
+      "underlying_asset": null,
+      "valor": 3.46,
+      "contexto": "Volumen del día a +3.5 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURCHF",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURCHF",
+      "valor": 2.81,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURJPY",
+      "valor": 2.74,
+      "contexto": "Volumen del día a +2.7 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": 350.0,
+      "contexto": "Open Interest varió +350.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "USDJPY",
+      "valor": 66.67,
+      "contexto": "Open Interest varió +66.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "COL",
+      "valor": 3.1,
+      "contexto": "Volumen del día a +3.1 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FCC",
+      "valor": 4.02,
+      "contexto": "Volumen del día a +4.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TRE",
+      "valor": 2.77,
+      "contexto": "Volumen del día a +2.8 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
