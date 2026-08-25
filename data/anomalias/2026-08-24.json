@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-08-24",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "REP",
+      "valor": 3.02,
+      "contexto": "Volumen del día a +3.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "IAG",
+      "valor": 2.66,
+      "contexto": "Volumen del día a +2.7 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
