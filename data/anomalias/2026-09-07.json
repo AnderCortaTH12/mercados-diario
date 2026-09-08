@@ -1,0 +1,47 @@
+{
+  "fecha": "2026-09-07",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ANE",
+      "valor": 43.48,
+      "contexto": "Open Interest varió +43.5% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ANE",
+      "valor": 3.8,
+      "contexto": "Volumen del día a +3.8 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "COL",
+      "valor": 4.24,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FCC",
+      "valor": 2.7,
+      "contexto": "Volumen del día a +2.7 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FER",
+      "valor": 3.4,
+      "contexto": "Volumen del día a +3.4 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SAN",
+      "valor": 3.65,
+      "contexto": "Volumen del día a +3.7 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
