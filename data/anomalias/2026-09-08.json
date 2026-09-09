@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-09-08",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ITX",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": 131.58,
+      "contexto": "Open Interest varió +131.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK TOTAL",
+      "underlying_asset": null,
+      "valor": 3.97,
+      "contexto": "Volumen del día a +4.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": 500.0,
+      "contexto": "Open Interest varió +500.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FER",
+      "valor": 43.39,
+      "contexto": "Open Interest varió +43.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FER",
+      "valor": 4.22,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "SAB",
+      "valor": 3.4,
+      "contexto": "Volumen del día a +3.4 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
