@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-09-09",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": 2.58,
+      "contexto": "Volumen del día a +2.6 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "GBPUSD",
+      "valor": -100.0,
+      "contexto": "Open Interest varió -100.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "IBE",
+      "valor": 2.52,
+      "contexto": "Volumen del día a +2.5 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "REP",
+      "valor": 3.92,
+      "contexto": "Volumen del día a +3.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "TRE",
+      "valor": 3.53,
+      "contexto": "Volumen del día a +3.5 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
