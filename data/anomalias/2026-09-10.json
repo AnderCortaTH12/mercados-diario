@@ -1,0 +1,47 @@
+{
+  "fecha": "2026-09-10",
+  "anomalias": [
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AENA",
+      "valor": 4.23,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "FER",
+      "valor": 60.0,
+      "contexto": "Open Interest varió +60.0% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "FER",
+      "valor": 3.03,
+      "contexto": "Volumen del día a +3.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": 31.63,
+      "contexto": "Open Interest varió +31.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "AENA",
+      "valor": 4.22,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "ENC",
+      "valor": 2.74,
+      "contexto": "Volumen del día a +2.7 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
