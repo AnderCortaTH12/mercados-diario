@@ -1,0 +1,201 @@
+{
+  "fecha": "2026-09-14",
+  "anomalias": [
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES IBEX 35",
+      "underlying_asset": null,
+      "valor": 44.57,
+      "contexto": "Open Interest varió +44.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES INDEX TOTAL",
+      "underlying_asset": null,
+      "valor": 37.39,
+      "contexto": "Open Interest varió +37.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES INDEX TOTAL",
+      "underlying_asset": null,
+      "valor": 2.04,
+      "contexto": "Volumen del día a +2.0 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ACS",
+      "valor": 2.2,
+      "contexto": "Volumen del día a +2.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "AENA",
+      "valor": -41.67,
+      "contexto": "Open Interest varió -41.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BBVA",
+      "valor": 20.7,
+      "contexto": "Open Interest varió +20.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BBVA",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BKT",
+      "valor": 26.32,
+      "contexto": "Open Interest varió +26.3% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "BKT",
+      "valor": 2.54,
+      "contexto": "Volumen del día a +2.5 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CABK",
+      "valor": -30.77,
+      "contexto": "Open Interest varió -30.8% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CABK",
+      "valor": 2.88,
+      "contexto": "Volumen del día a +2.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CLNX",
+      "valor": 115.38,
+      "contexto": "Open Interest varió +115.4% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "CLNX",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ELE",
+      "valor": 2.92,
+      "contexto": "Volumen del día a +2.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "IBE",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "ITX",
+      "valor": 3.89,
+      "contexto": "Volumen del día a +3.9 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "MTS",
+      "valor": 38.76,
+      "contexto": "Open Interest varió +38.8% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "NTGY",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK",
+      "underlying_asset": "SAN",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK DIVIDEND",
+      "underlying_asset": "SAND",
+      "valor": 374.62,
+      "contexto": "Open Interest varió +374.6% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK DIVIDEND",
+      "underlying_asset": "SAND",
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES STOCK DIVIDEND TOTAL",
+      "underlying_asset": null,
+      "valor": 222.93,
+      "contexto": "Open Interest varió +222.9% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK DIVIDEND TOTAL",
+      "underlying_asset": null,
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "FUTURES STOCK TOTAL",
+      "underlying_asset": null,
+      "valor": 4.25,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "variacion_oi_extrema",
+      "contract_group": "FUTURES XROLLING FX",
+      "underlying_asset": "EURJPY",
+      "valor": 21.74,
+      "contexto": "Open Interest varió +21.7% respecto al día anterior"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "AENA",
+      "valor": 3.6,
+      "contexto": "Volumen del día a +3.6 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "FDR",
+      "valor": 4.21,
+      "contexto": "Volumen del día a +4.2 desviaciones estándar de la media (20d)"
+    },
+    {
+      "tipo_anomalia": "volumen_anomalo",
+      "contract_group": "OPTIONS STOCK",
+      "underlying_asset": "VIS",
+      "valor": 3.93,
+      "contexto": "Volumen del día a +3.9 desviaciones estándar de la media (20d)"
+    }
+  ]
+}
